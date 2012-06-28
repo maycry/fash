@@ -1,0 +1,45 @@
+body{
+	font-family: 16px/1.5 Arial, "MS Trebuchet", sans-serif;
+}
+p{
+	margin: 0;
+}
+header{
+	width: 100%;
+	height: 2em;
+	background-color: #000;
+	padding-top: 1em;
+}
+header .logo{
+	max-width: 880px;
+	margin: 0 auto;
+	padding-left: 12px;
+}
+.content{
+	max-width: 880px;
+	margin: 1.5em auto;
+	overflow: hidden;
+	padding: 5px;
+}
+.item{
+	width:195px;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	float: left;
+	padding: 1em 12px 2em 12px;
+}
+.item:hover{
+	outline: 1px dotted #ccc;
+}
+.item .info{
+	margin-top:10px;
+}
+.item .link{
+	display: block;
+	height: 195px;
+	position: relative;
+}
+.item .link img{
+	position: absolute;
+	bottom: 0;
+}
