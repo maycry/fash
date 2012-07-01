@@ -1,29 +1,23 @@
-<h1>Listing items</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Link</th>
-    <th>Picture</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @items.each do |item| %>
-  <tr>
-    <td><%= item.name %></td>
-    <td><%= item.link %></td>
-    <td><%= item.picture %></td>
-    <td><%= item.price %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Item', new_item_path %>
+<div class="content">
+  <%= link_to(new_item_path, class: "add-item") do %>
+    <span><strong>+</strong> Add item</span>
+  <% end %>
+  <% @items.each do |item| %>
+    <div class="item">
+      <%= link_to(item, class: "link") do %>
+        <span class="image-wrapper">
+          <%= image_tag item.picture %>
+        </span>
+        <div class="info">
+          <p class="title"><span><%= item.name %></span></p>
+          <strong class="price"><%= item.price %> грн</strong>
+        </div>
+      <% end %>
+      <div class="edit">
+        <%= link_to 'Edit', edit_item_path(item) %>
+        <%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>

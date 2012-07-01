@@ -8,6 +8,10 @@ a{
 	color: #000;
 	text-decoration: none;
 }
+h2{
+	font-size:1em;
+	line-height: 1.25em;
+}
 header{
 	width: 100%;
 	height: 2em;
@@ -47,17 +51,39 @@ header .content .user .logout-link:hover{
 	background-color: #722644;
 }
 .content{
-	max-width: 880px;
+	width: 880px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 5px;
+}
+.add-item{
+	display: block;
+	float: left;
+	width:200px;
+	margin-right: 10px;
+	height: 278px;
+	outline: 1px solid #eee;
+	text-align:center;
+	line-height: 220px;
+	font-size:1em;
+	color: #666;
+	margin-left: 10px;
+}
+.add-item:hover span{
+	border-bottom: 1px solid #ccc;
+	color: #666;
+	}
+.add-item span strong{
+	font-size: 1.5em;
+	vertical-align: -1px;
 }
 .item{
 	width:195px;
 	font-size: 0.875em;
 	line-height: 1.5em;
 	float: left;
-	padding: 1em 12px 2em 12px;
+	padding: 1em 12px 1em 12px;
+	margin-bottom: 2em;
 }
 .item:hover{
 	outline: 1px solid #eee;
@@ -86,9 +112,30 @@ header .content .user .logout-link:hover{
 .item .link .image-wrapper img{
 	position: absolute;
 	bottom: 0;
+	max-width: 195px;
+	max-height: 195px;
 }
 .item .link .info .title{
 	display: block;
 	float: left;
 	padding-right: 1em;
+}
+.item .edit a{
+	border-bottom: 1px solid #ccc;
+	color: #666;
+	font-size:0.813em;
+}
+
+.form-header{
+	background-color: #eee;
+	width:100%;
+	margin-top: -1.5em;
+	margin-bottom: 1.5em;
+}
+
+
+
+.padding-20{
+	padding: 0 20px;
+	width: 860px;
 }
