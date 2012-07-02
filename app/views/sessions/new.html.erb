@@ -1,0 +1,22 @@
+<div class="form-header">
+  <div class="content padding-20">
+  <h2>Вход на сайт</h2>
+</div>
+</div>
+<div class="content padding-20">
+  <%= form_tag(sessions_path, class: "create-edit") do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="field checkbox">
+    <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+    <%= label_tag :remember_me %>
+  </div>
+  <div class="actions"><%= submit_tag "Log in" %></div>
+<% end %>
+</div>

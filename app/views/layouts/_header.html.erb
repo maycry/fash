@@ -3,6 +3,10 @@
     <div class="logo">
         <a href="/"><%= image_tag "/assets/logo.png" %></a>
       </div>
-    <div class="user">Танский Юрий <a class="logout-link" href="/logout">Выйти</a></div>
+    <div class="user">
+    <% if current_user %>
+      <%= current_user.email %><%= link_to("Log out", logout_path, class: "logout-link") %>
+      <% end %>
+    </div>
   </div>
 </header>

@@ -1,0 +1,28 @@
+<div class="form-header">
+	<div class="content padding-20">
+	<h2>Зарегистрироваться</h2>
+</div>
+</div>
+<div class="content padding-20">
+<%= form_for(@user, html: {class: "create-edit"}) do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
+</div>

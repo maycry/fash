@@ -12,11 +12,15 @@
 	display: block;
 	color: #999;
 }
-.create-edit .field input[type="text"]{
+.create-edit .field input[type="text"], .create-edit .field input[type="password"]{
 	height:2em;
 	font-size: 1em;
 	width: 100%;
 	padding: 0 0.25em;
+	background-color: #fff;
+}
+input:-webkit-autofill {
+    color: #2a2a2a !important;
 }
 .create-edit input[type="submit"]{
 	color: #eee;
@@ -24,6 +28,17 @@
 	padding: 0.5em 2em;
 	border: none;
 }
+.create-edit .checkbox{
+	padding-top: 0.5em;
+}
+.create-edit .checkbox label{
+	line-height: 13px;
+	padding-left: 17px;
+}
+.create-edit .checkbox input[type="checkbox"]{
+	float: left;
+}
+
 .create-edit input[type="submit"]:hover{
 	background-color: #37103d;
 }
