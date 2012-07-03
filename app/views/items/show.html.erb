@@ -1,23 +1,7 @@
-<div class="content padding-20">
+<div class="content item-current padding-20">
 	<p id="notice"><%= notice %></p>
-
-	<p>
-	  <b>Name:</b>
-	  <%= @item.name %>
-	</p>
-
-	<p>
-	  <b>Link:</b>
-	  <%= @item.link %>
-	</p>
-
-	<p>
-	  <b>Picture:</b>
-	  <%= @item.picture %>
-	</p>
-
-	<p>
-	  <b>Price:</b>
-	  <%= @item.price %>
-	</p>
+	<%= image_tag @item.picture, class: "item-image" %>
+	<p class="price"><%= @item.price %> грн</p>
+	<p class="name"><%= @item.name %></p>
+	<p class="shop">из <%= link_to @item.shop, "http://#{@item.shop}" %></p>
 </div>

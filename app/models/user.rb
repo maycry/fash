@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
+  has_many :items, :dependent => :destroy
+
   attr_accessible :email, :password
 
   validates_confirmation_of :password

@@ -1,7 +1,9 @@
 
-<div class="content">
-  <%= link_to(new_item_path, class: "add-item") do %>
-    <span><strong>+</strong> Add item</span>
+<div class="content items-list">
+  <% if current_user %>
+    <%= link_to(new_item_path, class: "add-item") do %>
+      <span><strong>+</strong> Add item</span>
+    <% end %>
   <% end %>
   <% @items.each do |item| %>
     <div class="item">
@@ -14,10 +16,12 @@
           <strong class="price"><%= item.price %> грн</strong>
         </div>
       <% end %>
-      <div class="edit">
-        <%= link_to 'Edit', edit_item_path(item) %>
-        <%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %>
-      </div>
+      <% if current_user %>
+        <div class="edit">
+          <%= link_to 'Edit', edit_item_path(item) %>
+          <%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>

@@ -1,7 +1,7 @@
 $(function() {
 	var field_picture = $('#item_picture');
 	var img_picture   = $('.item-picture');
-	var field_name    = $('#item_name');
+	var field_name    = $('#item_shop');
 
 	field_picture.keypress(function(){
 		img_picture.attr("src", field_picture.val());

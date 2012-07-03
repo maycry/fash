@@ -1,3 +1,5 @@
+/*Main styles*/
+/*__________________________________________________*/
 body{
 	font-family: 16px/1.5 Arial, "MS Trebuchet", sans-serif;
 }
@@ -12,20 +14,22 @@ h2{
 	font-size:1em;
 	line-height: 1.25em;
 }
+
+
+
+/*Header*/
+/*__________________________________________________*/
 header{
 	width: 100%;
 	height: 2em;
-	background: #37103d; /* Old browsers */
+	background: #37103d;
 	background: -moz-linear-gradient(left,  #37103d 0%, #511129 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#37103d), color-stop(100%,#511129)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #37103d 0%,#511129 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(left,  #37103d 0%,#511129 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(left,  #37103d 0%,#511129 100%); /* IE10+ */
 	background: linear-gradient(to right,  #37103d 0%,#511129 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37103d', endColorstr='#511129',GradientType=1 ); /* IE6-9 */
 	padding: 1em 0 0.4em;
 	margin-bottom: 1.5em;
-	/*box-shadow: 0 1px 8px #777;*/
 }
 header .content .logo{
 	max-width: 880px;
@@ -56,12 +60,17 @@ header .content .user .logout-link:hover{
 	overflow: hidden;
 	padding: 5px;
 }
-.add-item{
+
+
+
+/*Items*/
+/*__________________________________________________*/
+.items-list .add-item{
 	display: block;
 	float: left;
 	width:200px;
 	margin-right: 10px;
-	height: 278px;
+	height: 299px;
 	outline: 1px solid #eee;
 	text-align:center;
 	line-height: 220px;
@@ -69,15 +78,15 @@ header .content .user .logout-link:hover{
 	color: #666;
 	margin-left: 10px;
 }
-.add-item:hover span{
+.items-list .add-item:hover span{
 	border-bottom: 1px solid #ccc;
 	color: #666;
 	}
-.add-item span strong{
+.items-list .add-item span strong{
 	font-size: 1.5em;
 	vertical-align: -1px;
 }
-.item{
+.items-list .item{
 	width:195px;
 	font-size: 0.875em;
 	line-height: 1.5em;
@@ -85,54 +94,84 @@ header .content .user .logout-link:hover{
 	padding: 1em 12px 1em 12px;
 	margin-bottom: 2em;
 }
-.item:hover{
+.items-list .item:hover{
 	outline: 1px solid #eee;
 }
-.item .link{
+.items-list .item .link{
 	display: block;
 	background-color:	white;
 	overflow: hidden;
 }
-.item .link .info .title{
+.items-list .item .link .info .title{
 	display: block;
-	width: 110px;
+	width: 195px;
 	white-space: nowrap;
   overflow: hidden; 
   text-overflow: ellipsis;
+	padding-right: 1em;
  }
-.item .link:hover .info .title span{
+.items-list .item .link:hover .info .title span{
 	border-bottom: 1px solid #ccc;
 	color: #666;
 }
-.item .link .info{
+.items-list .item .link .info{
 	margin-top:0.875em;
 }
-.item .link .info .price{
+.items-list .item .link .info .inf .price{
 	color: #444;
-	float: right;
+
 }
-.item .link .image-wrapper{
+.items-list .item .link .image-wrapper{
 	display: block;
 	height: 195px;
 	position: relative;
 }
-.item .link .image-wrapper img{
+.items-list .item .link .image-wrapper img{
 	position: absolute;
 	bottom: 0;
 	max-width: 195px;
 	max-height: 195px;
 }
-.item .link .info .title{
-	display: block;
-	float: left;
-	padding-right: 1em;
+.items-list .item .link .info .title{
+	
 }
-.item .edit a{
+.items-list .item .edit a{
 	border-bottom: 1px solid #ccc;
 	color: #666;
 	font-size:0.813em;
 }
 
+
+
+/*Items*/
+/*__________________________________________________*/
+.item-current .item-image {
+	margin: 1em 0 1.5em;
+}
+.item-current .price{
+	font-size: 1.175em;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+.item-current .name{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+.item-current .shop{
+	font-size: 0.875em;
+	line-height: 1.5em;
+	color: #aaa;
+}
+.item-current .shop a{
+	color: #aaa;
+	border-bottom: 1px solid #ccc;
+	line-height: 2.25em;
+}
+
+
+
+/*Form*/
+/*__________________________________________________*/
 .form-header{
 	background-color: #eee;
 	width:100%;
@@ -148,6 +187,8 @@ header .content .user .logout-link:hover{
 
 
 
+/*Tools*/
+/*__________________________________________________*/
 .padding-20{
 	padding: 0 20px;
 	width: 860px;
